@@ -2,7 +2,9 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from pusher import Pusher
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import or_
-    
+import pymysql
+pymysql.install_as_MySQLdb()
+
 app = Flask(__name__)
 app.secret_key = "Secret Key"
 
